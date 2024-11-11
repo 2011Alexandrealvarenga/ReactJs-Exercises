@@ -1,2 +1,5 @@
-# ReactJs-Exercises
-In this repository i will deploy some exercise in React js
+## Para rodar o projeto
+npm run dev
+
+## criando projeto com o vite (react puro)
+npm create vite
