@@ -6,9 +6,18 @@ function Page(){
     <div >
 
       <h1>ola mundo</h1>
-      <Square />
-      <Person />
-      <Circle />
+      <hr style={{border: '3px solid blue'}} />
+      <Person 
+        name="Alexandre Alvarenga"
+        function="programador"
+      
+      />
+        <hr style={{border: '3px solid blue'}} />
+      <Person 
+        name="Bruno Fernandes Alvarenga"
+        function="Desenvolvedor"
+      
+      />
     </div>
   );
 }
