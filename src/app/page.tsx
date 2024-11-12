@@ -3,12 +3,8 @@ import { Card } from "./Card";
 function Page(){
   return(
     <div >    
-      <Card>
-        <>
-          <h4>Titulo do card</h4>
-          <p className="text-sm text-right">- Descricao do card</p>
-        </>
-      </Card>
+      <Card phrase="Alguma frase top" author="alguem que fez"></Card>
+      <Card phrase="Alguma frase top" ></Card>
     </div>
   );
 }
