@@ -1,9 +1,10 @@
 import { peopleList } from "@/data/peopleList";
 import Listagem from "./listagem";
+import ListagemFiltro from "./listagemFiltro";
 const Page = () =>{
   return(
     <div >    
-      <Listagem />
+      <ListagemFiltro />
     </div>
   );
 }
