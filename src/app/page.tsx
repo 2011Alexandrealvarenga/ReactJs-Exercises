@@ -1,7 +1,4 @@
-import { peopleList } from "@/data/peopleList";
-import Listagem from "./listagem";
-import ListagemFiltro from "./listagemFiltro";
-import { Hora } from "./exercicios/exercHoras";
+import { Hora } from "./labs/exercHoras";
 const Page = () =>{
   return(
     <div >    
