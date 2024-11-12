@@ -7,16 +7,15 @@ function Page(){
 
       <h1>ola mundo</h1>
       <hr style={{border: '3px solid blue'}} />
-      <Person 
-        name="Alexandre Alvarenga"
-        function="programador"
       
+      <Person
+        name="Alexandre"
+        avatar="nome do avatar"
       />
-        <hr style={{border: '3px solid blue'}} />
-      <Person 
-        name="Bruno Fernandes Alvarenga"
-        function="Desenvolvedor"
-      
+      <hr style={{border: '3px solid blue'}} />
+      <Person
+        name="jacqueline"
+        avatar="nome do avatar 2"
       />
     </div>
   );

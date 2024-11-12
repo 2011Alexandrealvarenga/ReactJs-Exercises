@@ -1,13 +1,16 @@
 type Props = {
   name: string;
-  function: string;
+  avatar: string;
+  roles?: string;
 }
-export const Person =(Props: Props)=>{
-
+export const Person = ({name, avatar, roles= 'aux adm'}: Props)=>{
   return(
     <>
-      <p>{Props.name}</p>
-      <p>{Props.function}</p>
+      <p>{name}</p>
+      <p>{avatar}</p>
+      <p>{roles}</p>
     </>
-  )
+  );
 }
+
+
