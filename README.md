@@ -5,4 +5,4 @@ npm run dev
 npm create vite
 
 parei aqui
-https://alunos.b7web.com.br/curso/reactjs/react-definindo-um-padrao-em-props
+https://alunos.b7web.com.br/curso/reactjs/react-renderizando-listas
