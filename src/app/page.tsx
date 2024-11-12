@@ -1,10 +1,9 @@
-import { ExeProps } from "./props";
-import { Card } from "./Card";
-function Page(){
+import { peopleList } from "@/data/peopleList";
+import Listagem from "./listagem";
+const Page = () =>{
   return(
     <div >    
-      <Card phrase="Alguma frase top" author="alguem que fez"></Card>
-      <Card phrase="Alguma frase top" ></Card>
+      <Listagem />
     </div>
   );
 }
