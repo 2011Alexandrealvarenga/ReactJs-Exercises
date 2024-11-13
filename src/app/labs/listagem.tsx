@@ -1,7 +1,7 @@
 import { peopleList } from "@/data/peopleList";
 const Listagem = () =>{
   return(
-    <div >    
+    <div>    
       {/* exibe uma lista de itens de um arquivo externo */}
       {
         peopleList.length > 0 &&
