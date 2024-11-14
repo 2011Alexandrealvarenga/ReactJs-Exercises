@@ -13,6 +13,9 @@ export const ListaTarefas = () =>{
 
   // adiciona itens em um array
   const handleAddButton = () =>{
+    // verifica se foi digitado alguma coisa
+    if(itemInput.trim() === '') return;
+
     setList([
       ...list,
       {label:itemInput, cheched: false}
@@ -21,7 +24,14 @@ export const ListaTarefas = () =>{
     // limpa o que foi digitado
     setItemInput('');
   }
-  
+
+  // deleta o item em uma lista
+  const deleteItem = (index: number) =>{
+    setList(
+      list.filter((item, key) => key !== index)
+    )
+  }
+
   const [itemInput, setItemInput] = useState('');
 
   const [list, setList] = useState<TodoItem[]> ([
@@ -46,8 +56,8 @@ export const ListaTarefas = () =>{
         <p className="m-5">{list.length} Itens na lista</p>
         <ul className="list-disc">
           {
-            list.map(item=>(
-              <li>{item.label} - <button className="hover:underline">[Deletar]</button></li>
+            list.map((item, index)=>(
+              <li key={index}>{item.label} - <button onClick={()=> deleteItem(index)} className="hover:underline">[Deletar]</button></li>
             ))
           }
         </ul>
