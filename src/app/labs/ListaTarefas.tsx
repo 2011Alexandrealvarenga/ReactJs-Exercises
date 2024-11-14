@@ -11,6 +11,19 @@ export const ListaTarefas = () =>{
     cheched: boolean;
   }
 
+  // adiciona itens em um array
+  const handleAddButton = () =>{
+    setList([
+      ...list,
+      {label:itemInput, cheched: false}
+    ])
+
+    // limpa o que foi digitado
+    setItemInput('');
+  }
+  
+  const [itemInput, setItemInput] = useState('');
+
   const [list, setList] = useState<TodoItem[]> ([
     {label: "fazer dever de casa", cheched: false},
     {label: "levar o lixo", cheched: false}
@@ -25,9 +38,12 @@ export const ListaTarefas = () =>{
             type="text"
             placeholder="O que deseja fazer?"
             className="flex-1 border border-black p-2"
+            value={itemInput}
+            onChange={e => setItemInput(e.target.value)}
            />
-           <button className="bg-black text-white p-2 m-2">Adicionar</button>
+           <button onClick={handleAddButton} className="bg-black text-white p-2 m-2">Adicionar</button>
         </div>
+        <p className="m-5">{list.length} Itens na lista</p>
         <ul className="list-disc">
           {
             list.map(item=>(
