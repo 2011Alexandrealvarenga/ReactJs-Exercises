@@ -1,12 +1,11 @@
 "use client"
 
-import { PrevEnvForm } from "./labs/PrevEnvioForm";
-
+import { SetStateAumentarNumero } from "./labs/SetStateAumentarNumero";
 
 const Page = () =>{
   return(
+    <SetStateAumentarNumero />
 
-    <PrevEnvForm/>
   )
 }
 export default Page;
