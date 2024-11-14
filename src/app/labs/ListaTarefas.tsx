@@ -8,7 +8,7 @@ export const ListaTarefas = () =>{
   
   type TodoItem ={
     label: string;
-    cheched: boolean;
+    checked: boolean;
   }
 
   // adiciona itens em um array
@@ -18,7 +18,7 @@ export const ListaTarefas = () =>{
 
     setList([
       ...list,
-      {label:itemInput, cheched: false}
+      {label:itemInput, checked: false}
     ])
 
     // limpa o que foi digitado
@@ -32,11 +32,18 @@ export const ListaTarefas = () =>{
     )
   }
 
+  // marcando com checkbox
+  const toggleItem = (index:number) =>{
+    let newList = [...list];
+    newList[index].checked = !newList[index].checked;
+    setList(newList);
+  }
+
   const [itemInput, setItemInput] = useState('');
 
   const [list, setList] = useState<TodoItem[]> ([
-    {label: "fazer dever de casa", cheched: false},
-    {label: "levar o lixo", cheched: false}
+    {label: "fazer dever de casa", checked: true},
+    {label: "levar o lixo", checked: false}
 
   ]);
   return(
@@ -57,7 +64,9 @@ export const ListaTarefas = () =>{
         <ul className="list-disc">
           {
             list.map((item, index)=>(
-              <li key={index}>{item.label} - <button onClick={()=> deleteItem(index)} className="hover:underline">[Deletar]</button></li>
+              <li key={index} className="flex mb-3">
+                <input onClick={()=> toggleItem(index)} type="checkbox" checked={item.checked} className="w-6 h-6 mr-3" />
+                {item.label} - <button onClick={()=> deleteItem(index)} className="hover:underline">[Deletar]</button></li>
             ))
           }
         </ul>
